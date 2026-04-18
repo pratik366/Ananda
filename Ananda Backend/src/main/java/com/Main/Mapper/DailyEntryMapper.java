@@ -16,9 +16,9 @@ public class DailyEntryMapper {
         List<DailyItemResponse> items = header.getEntries().stream()
                 .map(entry -> DailyItemResponse.builder()
                         .itemName(entry.getItem().getItemName())
-                        .previousQty(entry.getPreviousQty())   // ✅ updated
+                        .previousQty(entry.getPreviousQty())   
                         .todayQty(entry.getTodayQty())
-                        .todaySold(entry.getTodaySold())        // ✅ updated
+                        .todaySold(entry.getTodaySold())       
                         .totalAmount(entry.getTotalAmount())
                         .build()
                 )
